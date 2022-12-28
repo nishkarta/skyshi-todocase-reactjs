@@ -13,11 +13,11 @@ const ActivityLists = ({ groups, refetch }) => {
     const [nameDelete, setNameDelete] = useState()
 
     return (
-        <div data-cy="activity-item" className="">
+        <div className="">
             <Row>
                 {groups?.sort((a, b) => b.id - a.id).map((group) => (
                     <Col className="col-3" key={group.id}>
-                        <Card className="activity-item shadow-sm">
+                        <Card data-cy="activity-item" className="activity-item shadow-sm">
                             <div className="d-flex flex-column justify-content-between" style={{ height: "100%" }}>
                                 <Card.Title data-cy="activity-item-title" onClick={() => {
                                     navigate(`/todos/${group.id}`)
