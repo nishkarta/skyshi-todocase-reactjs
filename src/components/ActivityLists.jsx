@@ -25,14 +25,22 @@ const ActivityLists = ({ groups, refetch }) => {
                                     {group.title}
                                 </Card.Title>
                                 <div className="card-date d-flex justify-content-between">
-                                    <div data-cy="activity-item-date">{format(Date.parse(group.created_at), "dd-MM-yyyy", new Date())}</div>
-                                    <div><HiOutlineTrash data-cy="activity-item-delete-button" className="cursor-pointer" onClick={() => {
-                                        setIdDelete(group.id);
-                                        setNameDelete(group.title)
-                                        setShowConfirmDelete(true)
+                                    <div >
+                                        <span data-cy="activity-item-date">
+                                            {format(Date.parse(group.created_at), "dd-MM-yyyy", new Date())}
+                                        </span>
 
-                                    }
-                                    } /></div>
+                                    </div>
+
+                                    <div>
+                                        <span data-cy="activity-item-delete-button" ><HiOutlineTrash className="cursor-pointer" onClick={() => {
+                                            setIdDelete(group.id);
+                                            setNameDelete(group.title)
+                                            setShowConfirmDelete(true)
+
+                                        }
+                                        } /></span>
+                                    </div>
 
                                 </div>
                             </div>
