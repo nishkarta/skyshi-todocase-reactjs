@@ -153,14 +153,14 @@ const ItemListsPage = () => {
                 </div>
                 <div className="d-flex align-items-center">
                     <Dropdown className="me-3">
-                        <Dropdown.Toggle variant="transparent">
+                        <Dropdown.Toggle data-cy="todo-sort-button" variant="transparent">
                             <IconContext.Provider value={{ color: "#888", size: "20px", className: "global-class-name" }}>
                                 <HiArrowUp data-cy="tabler:arrows-sort" />
                                 <HiArrowDown data-cy="tabler:arrow-sort" />
                             </IconContext.Provider>
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                            <Dropdown.Item data-cy="sort-latest" className="d-flex" onClick={() => setSortBy('newest')}>
+                            <Dropdown.Item data-cy="sort-selection" className="d-flex" onClick={() => setSortBy('newest')}>
                                 <div className="col-3">
                                     <IconContext.Provider value={{ color: "#16ABF8", size: "15px", className: "global-class-name" }}>
                                         <RiSortDesc />
@@ -179,7 +179,7 @@ const ItemListsPage = () => {
                                 </div>
 
                             </Dropdown.Item>
-                            <Dropdown.Item data-cy="sort-oldest" className="d-flex" onClick={() => setSortBy('oldest')}>
+                            <Dropdown.Item data-cy="sort-selection" className="d-flex" onClick={() => setSortBy('oldest')}>
 
                                 <div className="col-3">
                                     <IconContext.Provider value={{ color: "#16ABF8", size: "15px", className: "global-class-name" }}>
@@ -198,7 +198,7 @@ const ItemListsPage = () => {
                                     </span>
                                 </div>
                             </Dropdown.Item>
-                            <Dropdown.Item data-cy="sort-az" className="d-flex" onClick={() => setSortBy('az')}>
+                            <Dropdown.Item data-cy="sort-selection" className="d-flex" onClick={() => setSortBy('az')}>
                                 <div className="col-3">
                                     <IconContext.Provider value={{ color: "#16ABF8", size: "15px", className: "global-class-name" }}>
                                         <ImSortAlphaAsc />
@@ -217,7 +217,7 @@ const ItemListsPage = () => {
                                 </div>
 
                             </Dropdown.Item>
-                            <Dropdown.Item data-sy="sort-za" className="d-flex" onClick={() => setSortBy('za')}>
+                            <Dropdown.Item data-sy="sort-selection" className="d-flex" onClick={() => setSortBy('za')}>
                                 <div className="col-3">
                                     <IconContext.Provider value={{ color: "#16ABF8", size: "15px", className: "global-class-name" }}>
                                         <ImSortAlphaDesc />
@@ -234,7 +234,7 @@ const ItemListsPage = () => {
                                     </span>
                                 </div>
                             </Dropdown.Item>
-                            <Dropdown.Item data-cy="sort-unfinished" className="d-flex me-3" onClick={() => setSortBy('unfinished')}>
+                            <Dropdown.Item data-cy="sort-selection" className="d-flex me-3" onClick={() => setSortBy('unfinished')}>
                                 <div className="col-3">
                                     <IconContext.Provider value={{ color: "#16ABF8", size: "15px", className: "global-class-name" }}>
                                         <HiArrowUp className="" />
