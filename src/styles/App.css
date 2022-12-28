@@ -1,0 +1,84 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.navbar-container {
+  padding: 30px 220px;
+  background-color: #16abf8;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.board-container {
+  padding: 43px 220px;
+  min-height: 100vh;
+  background-color: rgba(230, 230, 230, 0.6);
+}
+
+.group-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+}
+
+.activity-add-button {
+  background-color: #16abf8;
+  color: #fff;
+  padding: 13.5px 29px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  border: none;
+}
+
+.empty-activity-image {
+  width: 767px;
+  height: 490px;
+}
+
+.empty-todo-image {
+  width: 541px;
+  height: 413px;
+}
+
+.activity-item {
+  width: 220px;
+  height: 220px;
+  margin-bottom: 15px;
+  padding: 27px;
+}
+
+.activity-item-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  cursor: pointer;
+}
+
+.card-date {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #888888;
+}
+
+.modal-delete-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.group-edit-mode {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 3 px solid #000;
+}
+
+.group-edit-mode:focus {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 3 px solid #000;
+}
