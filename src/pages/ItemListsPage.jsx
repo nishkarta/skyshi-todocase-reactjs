@@ -136,9 +136,9 @@ const ItemListsPage = () => {
                     <h1 data-cy="todo-title" className="group-title me-3">
 
                         {!isEditing &&
-                            <>
+                            <span>
                                 {selectedGroup?.title !== undefined ? selectedGroup.title : "Activity Title"}
-                            </>
+                            </span>
 
 
                         }
