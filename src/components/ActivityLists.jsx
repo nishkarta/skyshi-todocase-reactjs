@@ -26,9 +26,9 @@ const ActivityLists = ({ groups, refetch }) => {
                                 </Card.Title>
                                 <div className="card-date d-flex justify-content-between">
                                     <div >
-                                        <p data-cy="activity-item-date">
+                                        <button data-cy="activity-item-date" className='card-date bg-transparent border-0'>
                                             {format(Date.parse(group.created_at), "dd-MM-yyyy", new Date())}
-                                        </p>
+                                        </button>
 
                                     </div>
 
