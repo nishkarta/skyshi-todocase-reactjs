@@ -133,7 +133,7 @@ const ItemListsPage = () => {
                         <MdOutlineKeyboardArrowLeft data-cy="todo-back-button" onClick={() => navigate('/')} />
 
                     </h1>
-                    <h1 className="group-title me-3">
+                    <h1 data-cy="" className="group-title me-3">
 
                         {!isEditing &&
                             <>

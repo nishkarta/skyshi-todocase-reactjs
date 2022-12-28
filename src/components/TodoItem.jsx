@@ -80,7 +80,7 @@ const TodoItem = ({ todo, refetch }) => {
 
     return (
         <>
-            <Card className="p-4 mb-3 shadow-sm">
+            <Card data-cy="activity-item" className="p-4 mb-3 shadow-sm">
                 <div className='d-flex justify-content-between'>
                     <div className="d-flex align-items-center">
                         <div className="form-check me-2 d-flex align-items-center">

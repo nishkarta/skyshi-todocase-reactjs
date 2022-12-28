@@ -44,9 +44,9 @@ const Dashboard = () => {
     return (
         <div >
             <div className="d-flex justify-content-between align-items-center" style={{ marginBottom: "55px" }}>
-                <div><h1 className="group-title">Activity</h1></div>
+                <div><h1 data-cy="activity-title" className="group-title">Activity</h1></div>
                 <div>
-                    <button data-cy="activity-add-button" className=" activity-add-button rounded-pill" onClick={addNewActivity}>
+                    <button data-cy="activity-add-button" className="activity-add-button rounded-pill" onClick={addNewActivity}>
                         <AiOutlinePlus data-cy="tabler:plus" />
                         Tambah</button>
                 </div>

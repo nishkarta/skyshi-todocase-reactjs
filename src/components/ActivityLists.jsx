@@ -13,7 +13,7 @@ const ActivityLists = ({ groups, refetch }) => {
     const [nameDelete, setNameDelete] = useState()
 
     return (
-        <div className="">
+        <div data-cy="activity-item" className="">
             <Row>
                 {groups?.sort((a, b) => b.id - a.id).map((group) => (
                     <Col className="col-3" key={group.id}>
@@ -26,7 +26,7 @@ const ActivityLists = ({ groups, refetch }) => {
                                 </Card.Title>
                                 <div className="card-date d-flex justify-content-between">
                                     <div data-cy="activity-item-date">{format(Date.parse(group.created_at), "dd-MM-yyyy", new Date())}</div>
-                                    <div><HiOutlineTrash data-cy="activity-item-delete-button tabler:trash" className="cursor-pointer" onClick={() => {
+                                    <div><HiOutlineTrash data-cy="activity-item-delete-button" className="cursor-pointer" onClick={() => {
                                         setIdDelete(group.id);
                                         setNameDelete(group.title)
                                         setShowConfirmDelete(true)
