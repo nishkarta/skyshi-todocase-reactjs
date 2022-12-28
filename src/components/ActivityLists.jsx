@@ -33,7 +33,7 @@ const ActivityLists = ({ groups, refetch }) => {
                                     </div>
 
                                     <div>
-                                        <span data-cy="activity-item-delete-button" ><HiOutlineTrash className="cursor-pointer" onClick={() => {
+                                        <span data-cy="activity-item-delete-button" force ><HiOutlineTrash className="cursor-pointer" onClick={() => {
                                             setIdDelete(group.id);
                                             setNameDelete(group.title)
                                             setShowConfirmDelete(true)
