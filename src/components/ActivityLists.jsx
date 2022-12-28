@@ -17,11 +17,15 @@ const ActivityLists = ({ groups, refetch }) => {
             <Row>
                 {groups?.sort((a, b) => b.id - a.id).map((group) => (
                     <Col className="col-3" key={group.id}>
-                        <Card data-cy="activity-item" className="activity-item shadow-sm">
+                        <Card data-cy="activity-item" className="activity-item shadow-sm" onClick={(e) => {
+                            if (e.target !== e.currentTarget) return;
+                            navigate(`/todos/${group.id}`)
+                        }}>
                             <div className="d-flex flex-column justify-content-between" style={{ height: "100%" }}>
-                                <Card.Title data-cy="activity-item-title" onClick={() => {
+                                <Card.Title data-cy="activity-item-title" className="activity-item-title" onClick={(e) => {
+                                    if (e.target !== e.currentTarget) return;
                                     navigate(`/todos/${group.id}`)
-                                }} className="activity-item-title">
+                                }}>
                                     {group.title}
                                 </Card.Title>
                                 <div className="card-date d-flex justify-content-between">
@@ -58,7 +62,7 @@ const ActivityLists = ({ groups, refetch }) => {
                 nameDelete={nameDelete}
                 refetch={refetch}
             />
-        </div>
+        </div >
     )
 }
 
