@@ -1,6 +1,6 @@
 import { format } from 'date-fns'
 import { useState } from 'react'
-import { Card, Col, Row } from "react-bootstrap"
+import { Button, Card, Col, Row } from "react-bootstrap"
 import { HiOutlineTrash } from 'react-icons/hi'
 import { useNavigate } from "react-router-dom"
 import ConfirmDelete from './modalalert/ConfirmDelete'
@@ -26,20 +26,22 @@ const ActivityLists = ({ groups, refetch }) => {
                                 </Card.Title>
                                 <div className="card-date d-flex justify-content-between">
                                     <div >
-                                        <span data-cy="activity-item-date">
+                                        <p data-cy="activity-item-date">
                                             {format(Date.parse(group.created_at), "dd-MM-yyyy", new Date())}
-                                        </span>
+                                        </p>
 
                                     </div>
 
                                     <div>
-                                        <span data-cy="activity-item-delete-button" force ><HiOutlineTrash className="cursor-pointer" onClick={() => {
+                                        <Button data-cy="activity-item-delete-button" className='p-0 bg-transparent border-0'><HiOutlineTrash style={{
+                                            color: '#000'
+                                        }} className="cursor-pointer" onClick={() => {
                                             setIdDelete(group.id);
                                             setNameDelete(group.title)
                                             setShowConfirmDelete(true)
 
                                         }
-                                        } /></span>
+                                        } /></Button>
                                     </div>
 
                                 </div>
