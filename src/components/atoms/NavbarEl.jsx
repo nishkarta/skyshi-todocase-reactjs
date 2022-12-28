@@ -7,7 +7,7 @@ const NavbarEl = () => {
 
         <Navbar data-cy="header-background" className="navbar-container" >
             <Navbar.Brand data-cy="header-title" onClick={() => navigate('/')} className="text-white cursor-pointer">
-                <span className="text-white cursor-pointer navbar-brand">To Do List App</span>
+                <span className="text-white cursor-pointer navbar-brand">TO DO LIST APP</span>
             </Navbar.Brand>
         </Navbar>
 
